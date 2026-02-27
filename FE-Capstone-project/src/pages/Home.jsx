@@ -8,7 +8,7 @@ function Home() {
   return (
     <div>
       <SearchBar setCity={setCity} />
-      <WeatherCard city={city} />
+      <WeatherCard city={city} setCity={setCity} />
     </div>
   );
 }

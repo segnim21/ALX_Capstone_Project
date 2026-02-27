@@ -1,4 +1,4 @@
-function WeatherCard({city}) {
+function WeatherCard({city, setCity}) {
   return (
     <div className="max-w-3xl mx-auto mt-10 bg-white shadow-xl rounded-xl p-8">
 
@@ -46,39 +46,56 @@ function WeatherCard({city}) {
 
       {/* Popular Cities */}
       <div>
-        <h3 className="text-xl font-bold mb-4 text-center">
-          Popular Cities
-        </h3>
+  <h3 className="text-xl font-bold mb-4 text-center">
+    Popular Cities
+  </h3>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+  <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
 
-          <div className="bg-gray-100 p-4 rounded-lg">
-            New York ☀️ 24°
-          </div>
+    <div
+      onClick={() => setCity("New York")}
+      className="bg-gray-100 p-4 rounded-lg cursor-pointer hover:bg-gray-200"
+    >
+      New York ☀️ 24°
+    </div>
 
-          <div className="bg-gray-100 p-4 rounded-lg">
-            Tokyo ☁️ 18°
-          </div>
+    <div
+      onClick={() => setCity("Tokyo")}
+      className="bg-gray-100 p-4 rounded-lg cursor-pointer hover:bg-gray-200"
+    >
+      Tokyo ☁️ 18°
+    </div>
 
-          <div className="bg-gray-100 p-4 rounded-lg">
-            Paris 🌧️ 14°
-          </div>
+    <div
+      onClick={() => setCity("Paris")}
+      className="bg-gray-100 p-4 rounded-lg cursor-pointer hover:bg-gray-200"
+    >
+      Paris 🌧️ 14°
+    </div>
 
-          <div className="bg-gray-100 p-4 rounded-lg">
-            Dubai ☀️ 35°
-          </div>
+    <div
+      onClick={() => setCity("Dubai")}
+      className="bg-gray-100 p-4 rounded-lg cursor-pointer hover:bg-gray-200"
+    >
+      Dubai ☀️ 35°
+    </div>
 
-          <div className="bg-gray-100 p-4 rounded-lg">
-            Sydney ⛅ 22°
-          </div>
+    <div
+      onClick={() => setCity("Sydney")}
+      className="bg-gray-100 p-4 rounded-lg cursor-pointer hover:bg-gray-200"
+    >
+      Sydney ⛅ 22°
+    </div>
 
-          <div className="bg-gray-100 p-4 rounded-lg">
-            Moscow ❄️ -2°
-          </div>
+    <div
+      onClick={() => setCity("Moscow")}
+      className="bg-gray-100 p-4 rounded-lg cursor-pointer hover:bg-gray-200"
+    >
+      Moscow ❄️ -2°
+    </div>
 
-        </div>
-      </div>
-
+  </div>
+</div>
     </div>
   );
 }
