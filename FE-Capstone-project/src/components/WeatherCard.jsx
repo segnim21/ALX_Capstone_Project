@@ -1,101 +1,85 @@
-function WeatherCard({city, setCity}) {
+import { useEffect, useState } from "react";
+import ErrorMessage from "./ErrorMessage";
+
+function WeatherCard({ city, setCity }) {
+  const [weather, setWeather] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  const API_KEY = "e0299b5f48827ab15d2e955e1f66ca60";
+
+  useEffect(() => {
+    const fetchWeather = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+
+        const response = await fetch(
+          `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`
+        );
+
+        if (!response.ok) {
+          throw new Error("City not found");
+        }
+
+        const data = await response.json();
+        setWeather(data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchWeather();
+  }, [city]);
+
+  if (loading) return <p className="text-center mt-10">Loading...</p>;
+ if (error) return <ErrorMessage message={error} />;
+  if (!weather) return null;
+
   return (
     <div className="max-w-3xl mx-auto mt-10 bg-white shadow-xl rounded-xl p-8">
 
-      {/* Title */}
       <h2 className="text-2xl font-bold text-center mb-6">
-        Today's Weather: {city}
+        Today's Weather: {weather.name}
       </h2>
 
-      {/* Main Weather */}
       <div className="text-center mb-8">
-        <div className="text-6xl mb-2">☁️</div>
-        <p className="text-4xl font-semibold">15°C</p>
-        <p className="text-gray-500">Mostly Cloudy</p>
+        <div className="text-6xl mb-2">
+          {weather.weather[0].main === "Clouds" && "☁️"}
+          {weather.weather[0].main === "Clear" && "☀️"}
+          {weather.weather[0].main === "Rain" && "🌧️"}
+        </div>
+        <p className="text-4xl font-semibold">
+          {Math.round(weather.main.temp)}°C
+        </p>
+        <p className="text-gray-500">
+          {weather.weather[0].description}
+        </p>
       </div>
 
-      {/* Weather Details */}
       <div className="grid grid-cols-3 gap-6 text-center mb-8">
 
         <div className="bg-gray-100 p-4 rounded-lg">
           <p className="text-2xl">💧</p>
           <p className="font-semibold">Humidity</p>
-          <p>72%</p>
+          <p>{weather.main.humidity}%</p>
         </div>
 
         <div className="bg-gray-100 p-4 rounded-lg">
           <p className="text-2xl">💨</p>
           <p className="font-semibold">Wind</p>
-          <p>12 km/h</p>
+          <p>{weather.wind.speed} km/h</p>
         </div>
 
         <div className="bg-gray-100 p-4 rounded-lg">
           <p className="text-2xl">🌡️</p>
           <p className="font-semibold">Feels Like</p>
-          <p>13°C</p>
+          <p>{Math.round(weather.main.feels_like)}°C</p>
         </div>
 
       </div>
-
-      {/* Refresh Button */}
-      <div className="text-center mb-8">
-        <button className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
-          🔄 Refresh
-        </button>
-      </div>
-
-      {/* Popular Cities */}
-      <div>
-  <h3 className="text-xl font-bold mb-4 text-center">
-    Popular Cities
-  </h3>
-
-  <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
-
-    <div
-      onClick={() => setCity("New York")}
-      className="bg-gray-100 p-4 rounded-lg cursor-pointer hover:bg-gray-200"
-    >
-      New York ☀️ 24°
-    </div>
-
-    <div
-      onClick={() => setCity("Tokyo")}
-      className="bg-gray-100 p-4 rounded-lg cursor-pointer hover:bg-gray-200"
-    >
-      Tokyo ☁️ 18°
-    </div>
-
-    <div
-      onClick={() => setCity("Paris")}
-      className="bg-gray-100 p-4 rounded-lg cursor-pointer hover:bg-gray-200"
-    >
-      Paris 🌧️ 14°
-    </div>
-
-    <div
-      onClick={() => setCity("Dubai")}
-      className="bg-gray-100 p-4 rounded-lg cursor-pointer hover:bg-gray-200"
-    >
-      Dubai ☀️ 35°
-    </div>
-
-    <div
-      onClick={() => setCity("Sydney")}
-      className="bg-gray-100 p-4 rounded-lg cursor-pointer hover:bg-gray-200"
-    >
-      Sydney ⛅ 22°
-    </div>
-
-    <div
-      onClick={() => setCity("Moscow")}
-      className="bg-gray-100 p-4 rounded-lg cursor-pointer hover:bg-gray-200"
-    >
-      Moscow ❄️ -2°
-    </div>
-
-  </div>
-</div>
     </div>
   );
 }
