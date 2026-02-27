@@ -1,29 +1,33 @@
 import { useState } from "react";
 
-function SearchBar() {
-    const [city, setCity] = useState("");
+function SearchBar({ setCity }) {
+  const [input, setInput] = useState("");
 
-    const handleSearch = () => {
-        console.log("Searching for:", city);
+  const handleSearch = () => {
+    if (input.trim() !== "") {
+      setCity(input);
+      setInput("");
+    }
+  };
 
-    };
-    return (
-        <div>
-            <input
-            type="text"
-            placeholder="Enter city name..."
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-            className="border p-2 rounded w-64"
+  return (
+    <div className="flex gap-2 justify-center mt-10">
+      <input
+        type="text"
+        placeholder="Enter city..."
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        className="border p-2 rounded w-64"
+      />
 
-            />
-            <button className="bg-green-600 text-white px-4 py-2 rounded">
-            Search
-            </button>
-
-        
-        </div>
-    );
+      <button
+        onClick={handleSearch}
+        className="bg-blue-600 text-white px-4 py-2 rounded"
+      >
+        Search
+      </button>
+    </div>
+  );
 }
 
 export default SearchBar;
