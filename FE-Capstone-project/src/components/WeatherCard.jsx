@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import ErrorMessage from "./ErrorMessage";
 
-function WeatherCard({ city, setCity }) {
+function WeatherCard({ city }) {
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const API_KEY = "e0299b5f48827ab15d2e955e1f66ca60";
+  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
   useEffect(() => {
     const fetchWeather = async () => {
@@ -35,12 +35,11 @@ function WeatherCard({ city, setCity }) {
   }, [city]);
 
   if (loading) return <p className="text-center mt-10">Loading...</p>;
- if (error) return <ErrorMessage message={error} />;
+  if (error) return <ErrorMessage message={error} />;
   if (!weather) return null;
 
   return (
     <div className="max-w-3xl mx-auto mt-10 bg-white shadow-xl rounded-xl p-8">
-
       <h2 className="text-2xl font-bold text-center mb-6">
         Today's Weather: {weather.name}
       </h2>
@@ -51,16 +50,17 @@ function WeatherCard({ city, setCity }) {
           {weather.weather[0].main === "Clear" && "☀️"}
           {weather.weather[0].main === "Rain" && "🌧️"}
         </div>
+
         <p className="text-4xl font-semibold">
           {Math.round(weather.main.temp)}°C
         </p>
+
         <p className="text-gray-500">
           {weather.weather[0].description}
         </p>
       </div>
 
       <div className="grid grid-cols-3 gap-6 text-center mb-8">
-
         <div className="bg-gray-100 p-4 rounded-lg">
           <p className="text-2xl">💧</p>
           <p className="font-semibold">Humidity</p>
@@ -78,7 +78,6 @@ function WeatherCard({ city, setCity }) {
           <p className="font-semibold">Feels Like</p>
           <p>{Math.round(weather.main.feels_like)}°C</p>
         </div>
-
       </div>
     </div>
   );
