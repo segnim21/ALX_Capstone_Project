@@ -2,17 +2,16 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="bg-blue-800 text-white p-4">
-      <div className="container mx-auto flex justify-between">
-        <h1 className="text-lg font-bold">Weather Dashboard</h1>
-
-        <div className="space-x-4">
-          <Link to="/" className="hover:underline">Home</Link>
-          <Link to="/about" className="hover:underline">About</Link>
-          <Link to="/contact" className="hover:underline">Contact</Link>
-        </div>
-      </div>
-    </nav>
+    <nav className="fixed top-0 left-0 w-full bg-[#1a1a1f] hover:bg-blue-500 shadow-md z-50">
+  <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 className="text-xl font-bold text-white" >Weather Dashboard</h1>
+    <div className="flex gap-4 ">
+      <a href="/" className="text-white">Home</a>
+      <a href="/about" className="text-white">About</a>
+      <a href="/contact" className="text-white">Contact</a>
+    </div>
+  </div>
+</nav>
   );
 }
 

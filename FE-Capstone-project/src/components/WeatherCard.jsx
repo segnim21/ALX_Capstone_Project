@@ -152,7 +152,7 @@ function WeatherCard({ city, setCity }) {
       <div className="text-center mt-8">
         <button
           onClick={fetchWeather}
-          className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition"
+          className="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition"
         >
           🔄 Refresh
         </button>

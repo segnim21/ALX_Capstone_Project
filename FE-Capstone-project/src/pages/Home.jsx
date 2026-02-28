@@ -3,10 +3,11 @@ import SearchBar from "../components/SearchBar";
 import WeatherCard from "../components/WeatherCard";
 
 function Home() {
-  const [city, setCity] = useState("London");
+  // Default city 
+  const [city, setCity] = useState("Addis Ababa");
 
   return (
-    <div>
+    <div className="min-h-screen bg-[#ced1d3]  transition-colors p-4">
       <SearchBar setCity={setCity} />
       <WeatherCard city={city} setCity={setCity} />
     </div>
