@@ -72,11 +72,11 @@ function About() {
         </div>
       </div>
 
-      {/* Developer Section - Updated with your information */}
+      {/* about me section */}
       <div className="card mb-8 border-2 border-primary-light">
         <h3 className="text-2xl font-bold mb-6 text-primary-dark">👨‍💻 About the Developer</h3>
         <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
-          <div className="w-32 h-32 bg-gradient-to-br from-primary to-sky rounded-full flex items-center justify-center text-5xl text-white shadow-lg">
+          <div className="w-32 h-32  from-primary to-sky rounded-full flex items-center justify-center text-5xl text-white shadow-lg">
             👤
           </div>
           <div className="flex-1">
@@ -94,7 +94,7 @@ function About() {
             <div className="space-y-3 mb-4">
               <div className="flex items-center gap-3">
                 <span className="text-2xl">🎨</span>
-                <span className="text-gray-700"><span className="font-semibold">UI Design Skills:</span> Figma, Adobe XD, Prototyping, Wireframing</span>
+                <span className="text-gray-700"><span className="font-semibold">UI Design Skills:</span> Figma, Prototyping, Wireframing</span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-2xl">💻</span>
@@ -102,7 +102,7 @@ function About() {
               </div>
             </div>
 
-            {/* Availability Banner */}
+          
             <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
               <div className="flex items-center gap-3">
                 <span className="text-3xl">🌟</span>
@@ -122,30 +122,27 @@ function About() {
                 <span>📧</span> Email Me
               </a>
               <a 
-                href="#" 
+                href="https://linkedin.com/in/segni-mideksa21
+
+" 
                 className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition flex items-center gap-2"
               >
                 <span>🔗</span> LinkedIn
               </a>
               <a 
-                href="#" 
+                href="https://github.com/segnim21" 
                 className="bg-gray-800 hover:bg-gray-900 text-white px-4 py-2 rounded-lg transition flex items-center gap-2"
               >
                 <span>💻</span> GitHub
               </a>
-              <a 
-                href="#" 
-                className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition flex items-center gap-2"
-              >
-                <span>🎨</span> Portfolio
-              </a>
+              
             </div>
           </div>
         </div>
       </div>
 
       {/* Learning Journey Section */}
-      <div className="card bg-gradient-to-r from-yellow-50 to-orange-50">
+      <div className="card  from-yellow-50 to-orange-50">
         <h3 className="text-xl font-bold mb-4">📚 My Learning Journey with ALX</h3>
         <div className="flex items-start gap-4">
           <span className="text-4xl">🚀</span>
