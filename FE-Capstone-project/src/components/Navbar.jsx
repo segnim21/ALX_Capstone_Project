@@ -5,7 +5,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-[#1d1e25] text-white shadow-lg hover:bg-blue-700">
+    <nav className="bg-[#18181f] hover:bg-blue-700 text-white shadow-lg sticky top-0 z-50">
       <div className="container-custom">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
