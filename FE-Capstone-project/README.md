@@ -1,25 +1,69 @@
-# Weather Dashboard
+🌤️ Weather Dashboard
 
-## Project Description
+A modern and responsive weather application built with React (Vite) and Tailwind CSS.
+Users can search for any city and view real-time weather information along with a 5-day forecast.
 
-A responsive weather dashboard built with React (Vite) and Tailwind CSS.
-Users can search for a city and view real-time weather information.
+This project was developed as part of the ALX Frontend Development Capstone Project.
 
-## Features
+📌 Features
+🌍 Weather Search
 
-- Search weather by city
-- Display temperature, humidity, wind speed
-- Responsive design
-- Multiple pages (Home, About, Contact)
+Search weather by city name
 
-## Tech Stack
+Default city set to Addis Ababa
 
-- React (Vite)
-- Tailwind CSS
-- React Router
-- OpenWeatherMap API
+🌡️ Current Weather Information
 
-## Status
+Temperature (°C)
 
-Project setup and structure completed.
-Core features in progress.
+Weather condition
+
+Humidity
+
+Wind speed
+
+“Feels like” temperature
+
+📅 5-Day Forecast
+
+Daily high & low temperatures
+
+Weather condition icons
+
+Clean card layout
+
+🎨 UI Features
+
+Light / Dark mode toggle
+
+Refresh button
+
+Popular cities quick selection
+
+Fully responsive (mobile + desktop)
+
+Fixed navigation bar
+
+🛠️ Tech Stack
+Technology Purpose
+React (Vite) Frontend framework
+Tailwind CSS Styling
+React Router DOM Page navigation
+OpenWeatherMap API Weather data
+Netlify Deployment
+📂 Project Structure
+src/
+│
+├── components/
+│ ├── Navbar.jsx
+│ ├── Footer.jsx
+│ ├── WeatherCard.jsx
+│ └── ErrorMessage.jsx
+│
+├── pages/
+│ ├── Home.jsx
+│ ├── About.jsx
+│ └── Contact.jsx
+│
+├── App.jsx
+└── main.jsx
