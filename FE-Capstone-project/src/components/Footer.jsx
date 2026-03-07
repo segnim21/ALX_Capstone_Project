@@ -74,7 +74,7 @@ function Footer() {
             </div>
 
             <p className="mt-4 text-sm">
-              Open for internships & junior frontend opportunities.
+              Open for internships & junior frontend opportunities. WeatherDashboard first deployment is successfully done
             </p>
           </div>
         </div>
