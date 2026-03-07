@@ -34,7 +34,7 @@ Clean card layout
 
 ## Live Demo
 
-[Click here to view the live project] (https://alx-capstone-project-fe.netlify.app)
+[Click here to view the live project] (https://alx-capstone-project-roan-theta.vercel.app)
 
 🎨 UI Features
 
