@@ -74,7 +74,9 @@ function Footer() {
             </div>
 
             <p className="mt-4 text-sm">
+
               Open for internships & junior frontend opportunities. 
+
             </p>
           </div>
         </div>
