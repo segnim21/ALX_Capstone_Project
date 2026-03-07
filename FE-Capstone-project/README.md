@@ -32,8 +32,9 @@ Weather condition icons
 
 Clean card layout
 
-#Live Demo
-[Click here to view the live project] => alx-capstone-project-fe.netlify.app
+## Live Demo
+
+[Click here to view the live project] (https://alx-capstone-project-fe.netlify.app)
 
 🎨 UI Features
 
