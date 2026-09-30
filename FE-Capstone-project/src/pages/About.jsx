@@ -63,21 +63,21 @@ function About() {
           {/* Links */}
           <div className="flex flex-wrap gap-4">
             <a
-              href="mailto:segnimideksa12@gmail.com"
+              href="mailto:segnimideksa12@gmail.com" target="_blank"
               className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition"
             >
               📧 Email
             </a>
 
             <a
-              href="https://linkedin.com/in/segnimideksa21"
+              href="https://linkedin.com/in/segnimideksa21" target = "_blank"
               className="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-lg transition"
             >
               LinkedIn
             </a>
 
             <a
-              href="https://github.com/segnim21"
+              href="https://github.com/segnim21" target = "_blank"
               className="bg-gray-800 hover:bg-gray-900 text-white px-4 py-2 rounded-lg transition"
             >
               GitHub
