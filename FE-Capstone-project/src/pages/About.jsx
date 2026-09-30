@@ -63,14 +63,14 @@ function About() {
           {/* Links */}
           <div className="flex flex-wrap gap-4">
             <a
-              href="mailto:segnim21@gmail.com"
+              href="mailto:segnimideksa12@gmail.com"
               className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition"
             >
               📧 Email
             </a>
 
             <a
-              href="https://linkedin.com/in/segni-mideksa21"
+              href="https://linkedin.com/in/segnimideksa21"
               className="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-lg transition"
             >
               LinkedIn
