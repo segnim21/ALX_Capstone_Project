@@ -57,7 +57,7 @@ function Footer() {
               </a>
 
               <a
-                href="https://linkedin.com/in/segni-mideksa21"
+                href="https://linkedin.com/in/segnimideksa"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition"
@@ -66,7 +66,7 @@ function Footer() {
               </a>
 
               <a
-                href="mailto:segni.mideksa@example.com"
+                href="mailto:segnimideksa12@gmail.com"
                 className="hover:text-white transition"
               >
                 📧
